@@ -7,46 +7,30 @@
     <title>Happy Birthday Ratna!</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #ffe4e1, #fffacd); /* Pastel gradient background */
+            background-color: #000; /* Black background for dramatic effect */
             font-family: 'Poppins', sans-serif;
+            color: #fff;
             margin: 0;
             padding: 0;
-            color: #333;
-            text-align: center;
+            overflow-x: hidden;
         }
 
         .container {
-            position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-        .balloons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            z-index: -1;
-            background: url('https://i.imgur.com/7n3RRwn.png') no-repeat center;
-            background-size: cover;
-            opacity: 0.4;
+            text-align: center;
+            position: relative;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: bold;
-            color: #ff6b81;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            color: #ff6b81; /* Vibrant pink */
             margin-bottom: 20px;
-        }
-
-        .highlight {
-            color: #f9a825; /* Golden yellow for highlights */
-            font-weight: bold;
+            text-shadow: 3px 3px 8px rgba(255, 107, 129, 0.5);
         }
 
         .message {
@@ -54,20 +38,39 @@
             line-height: 1.8;
             max-width: 800px;
             margin: 20px auto;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid #f9a825; /* Golden yellow border */
+            color: #e3f2fd; /* Light blue text */
+        }
+
+        .highlight {
+            color: #f9a825; /* Golden yellow highlight */
+            font-weight: bold;
+        }
+
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: url('https://i.imgur.com/Z4Ry4Ve.png') no-repeat center top;
+            background-size: cover;
+            opacity: 0.6;
         }
 
         .cake {
-            width: 250px;
+            width: 300px;
             height: auto;
-            margin: 20px auto;
+            margin: 20px 0;
+            filter: drop-shadow(0 5px 15px rgba(255, 255, 255, 0.2));
         }
 
         .button {
-            background-color: #ff6b81;
+            background-color: #ff6b81; /* Pink button */
             color: #fff;
             font-size: 1.2rem;
             font-weight: bold;
@@ -81,17 +84,17 @@
 
         .button:hover {
             transform: scale(1.1);
-            background-color: #f9a825;
+            background-color: #f9a825; /* Golden yellow hover */
         }
 
         footer {
             margin-top: 40px;
             font-size: 1rem;
-            color: #555;
+            color: #bbb;
         }
 
         audio {
-            display: none;
+            display: none; /* Hide the audio player */
         }
     </style>
 </head>
@@ -131,3 +134,4 @@
     </div>
 </body>
 </html>
+
