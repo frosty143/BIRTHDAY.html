@@ -7,138 +7,127 @@
     <title>Happy Birthday Ratna!</title>
     <style>
         body {
-            background: url('https://www.transparenttextures.com/patterns/balloons.png'); /* Balloon Pattern */
-            background-color: #fbe5d6; /* Pastel background color */
-            background-size: cover;
-            font-family: 'Arial', sans-serif;
-            color: #fff;
+            background: linear-gradient(to bottom, #ffe4e1, #fffacd); /* Pastel gradient background */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
             text-align: center;
-            padding: 50px;
-            overflow-x: hidden;
         }
 
-        h1 {
-            font-size: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ffb6b6; /* Pastel pink */
-            background: rgba(255, 255, 255, 0.7);
-            display: inline-block;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        p {
-            font-size: 22px;
-            line-height: 1.6;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            display: inline-block;
-            padding: 15px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 30px auto;
-            color: #fce3d8; /* Light pastel yellow */
-        }
-
-        .highlight {
-            color: #ffeb3b; /* Highlight color in bright yellow */
-            font-weight: bold;
+        .container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .balloons {
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            z-index: -1;
+            background: url('https://i.imgur.com/7n3RRwn.png') no-repeat center;
+            background-size: cover;
+            opacity: 0.4;
         }
 
-        .balloon {
-            width: 100px;
-            height: 150px;
-            border-radius: 50%;
-            background: #ffb6b6; /* Pastel pink */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
+        h1 {
+            font-size: 3.5rem;
             font-weight: bold;
-            color: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: #ff6b81;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
 
-        .balloon:nth-child(2) {
-            background: #ffeb3b; /* Yellow balloon */
+        .highlight {
+            color: #f9a825; /* Golden yellow for highlights */
+            font-weight: bold;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
         .cake {
-            margin-top: 30px;
-            width: 200px;
+            width: 250px;
             height: auto;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 18px;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 10px;
-            border-radius: 5px;
+            margin: 20px auto;
         }
 
         .button {
-            background-color: #ffb6b6; /* Pastel pink */
+            background-color: #ff6b81;
             color: #fff;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-size: 18px;
+            font-size: 1.2rem;
+            font-weight: bold;
             text-decoration: none;
-            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 25px;
             margin-top: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .button:hover {
-            background-color: #fce3d8; /* Light pastel yellow */
+            transform: scale(1.1);
+            background-color: #f9a825;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #555;
         }
 
         audio {
-            display: none; /* Hide the audio player */
+            display: none;
         }
     </style>
 </head>
 <body>
-    <!-- Background Music -->
-    <audio autoplay loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div class="container">
+        <!-- Balloons in the background -->
+        <div class="balloons"></div>
 
-    <h1>Happy Birthday Ratna!</h1>
+        <!-- Title -->
+        <h1>Happy Birthday Ratna!</h1>
 
-    <!-- Balloons -->
-    <div class="balloons">
-        <div class="balloon">Ratna</div>
-        <div class="balloon">22 Years</div>
-    </div>
+        <!-- Cake Image -->
+        <img src="https://i.imgur.com/ZrIptAA.png" alt="Birthday Cake" class="cake">
 
-    <!-- Cake Image -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Birthday_cake_with_candles.png" alt="Birthday Cake" class="cake">
+        <!-- Message -->
+        <div class="message">
+            <p>
+                Dear Ratna, on your <span class="highlight">22nd birthday</span>, I just want you to know how much you mean to me. 
+                You’re the <span class="highlight">coder</span> who fills my life with endless joy, the <span class="highlight">algorithm</span> that keeps my heart running, 
+                and the bug-fixer of all my worries. May your dreams compile flawlessly and your happiness never encounter an error. ❤️
+            </p>
+        </div>
 
-    <p>
-        On your special day, I just wanted to take a moment to tell you how much you mean to me. You are my <span class="highlight">favorite coder</span>, the one who makes every challenge seem solvable and every problem a little bit easier. You’re the <span class="highlight">algorithm</span> that keeps me going, the bug-fixer of my world, and the one who makes my life feel like the most amazing project ever. 🖥️❤️
-    </p>
+        <!-- Button -->
+        <a href="https://github.com/" class="button">Let’s code our future together!</a>
 
-    <p>
-        Here's to another year of <span class="highlight">success</span>, <span class="highlight">love</span>, and <span class="highlight">endless adventure</span> together. May all your dreams compile into reality with no errors, and may your heart always be filled with joy. I love you more than all the lines of code in the world. 😘
-    </p>
+        <!-- Footer -->
+        <footer>
+            Wishing you a birthday as amazing as you are. 💻🎉
+        </footer>
 
-    <a href="https://www.github.com" class="button">Let’s code our future together!</a>
-
-    <div class="footer">
-        Wishing you the best birthday ever, Ratna. 💻🎉
+        <!-- Background Music -->
+        <audio autoplay loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 </body>
 </html>
